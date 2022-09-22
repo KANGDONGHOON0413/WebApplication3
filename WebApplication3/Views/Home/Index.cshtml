@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "연습장";
+    int cnt = 0;
+}
+
+<div class="text-center">
+    <p>아래는 컨트롤러에서 매개변수로 넘겨받은 값을 출력하는 방식이다</p>
+    <h1>사용자 시리얼 넘버 : @Model.UserNo </h1>
+    <h2>사용자 아이디 : @Model.UserID </h2>
+</div>
+<br />
+<br />
+<div>
+    <p>아래가 @@ViewBag로 넘겨받은 값을 출력하는 방식이다</p>
+    <h1> @ViewBag.newBag.UserNo </h1>
+    <h1> @ViewBag.newBag.UserID </h1>
+    <br />
+    <br />
+    </div>
+<div>
+    <p>아래가 @@ViewData로 넘겨받은 값을 출력하는 방식이다</p>
+    <h1> @ViewData["UserNo"] </h1>
+    <h1> @ViewData["UserID"] </h1>
+    <br />
+    <br />
+    @if (cnt == 0)
+    {
+        <h2>뉴비입니다</h2>
+    }
+    else
+    {
+        <h2> 고인물 입니다</h2>
+    }
+
+    <br />
+    <br />
+    @for (int i = 0; i < 10; i++)
+    {
+        <p>으악 나죽어 @i 번째</p>
+    }
+    @{
+        int[] arr = { 1, 2, 3, 4, 5 };
+    }
+
+    <ul>
+        @foreach (var array in arr)
+        {
+            <li>@array</li>
+        }
+    </ul>
+</div>
